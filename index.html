@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonnenglas Hero Recreation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        /* Custom utilities to hide scrollbar if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-black antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="w-full px-6 py-6 md:px-10 md:py-8 flex justify-between items-center bg-white relative z-50">
+        <!-- Logo -->
+        <div class="text-xl md:text-2xl tracking-tight text-black font-normal">
+            Sonnenglas
+        </div>
+        
+        <!-- Centered Menu -->
+        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl md:text-2xl tracking-tight text-black font-normal hidden md:block">
+            Menu
+        </div>
+        
+        <!-- Right Icon -->
+        <div class="cursor-pointer">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+                <!-- Abstract mountain/M shape -->
+                <path d="M6 18 L12 8 L18 18 L24 6 L30 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Label -->
+    <div class="md:hidden absolute top-8 left-1/2 transform -translate-x-1/2 text-xl tracking-tight font-normal">
+        Menu
+    </div>
+
+    <!-- Hero Headline -->
+    <section class="px-6 md:px-10 mt-16 mb-20 md:mt-24 md:mb-28">
+        <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.25rem] leading-[1.1] font-normal tracking-tight max-w-[90%] md:max-w-5xl text-black">
+            Sonnenglas delivers sustainable illumination via handcrafted solar-powered glass lanterns.
+        </h1>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="w-full mb-32 relative">
+        <!-- Flex container centered to show main image in middle -->
+        <div class="flex items-center justify-center w-[150%] -ml-[25%] md:w-full md:ml-0 gap-0">
+            
+            <!-- Far Left Image (Partial) -->
+            <div class="w-[15%] h-[200px] md:h-[300px] flex-shrink-0 relative overflow-hidden">
+                <img src="https://placehold.co/400x600/1a202c/1a202c" class="w-full h-full object-cover opacity-90" alt="Building Night">
+            </div>
+
+            <!-- Left Image (Visible) -->
+            <div class="w-[20%] h-[250px] md:h-[400px] flex-shrink-0 relative overflow-hidden">
+                <img src="https://placehold.co/600x800/15803d/15803d" class="w-full h-full object-cover" alt="Landscape">
+            </div>
+
+            <!-- Center Main Image -->
+            <div class="w-[45%] md:w-[45%] flex-shrink-0 relative z-10 flex flex-col">
+                <!-- Image Wrapper -->
+                <div class="w-full h-[350px] md:h-[600px]">
+                    <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/fd103eb9-a79e-46bb-9dbc-48d0b4df2dd2/hero-2-img-0-1770099278178.png" class="w-full h-full object-cover" alt="Handcrafted Fair Trade Solar Lanterns">
+                </div>
+                
+                <!-- Caption positioned absolutely to maintain vertical alignment of images -->
+                <div class="absolute top-full left-0 mt-5 w-full">
+                    <h3 class="text-lg md:text-xl text-black font-normal">The Theodore Roosevelt Presidential Library</h3>
+                    <p class="text-gray-400 font-light text-base md:text-lg mt-1">Sustainable lighting for off-grid and eco-conscious living</p>
+                </div>
+            </div>
+
+            <!-- Right Image (Visible) -->
+            <div class="w-[20%] h-[250px] md:h-[400px] flex-shrink-0 relative overflow-hidden">
+                <img src="https://placehold.co/600x800/e5e7eb/e5e7eb" class="w-full h-full object-cover" alt="Theatre">
+            </div>
+
+            <!-- Far Right Image (Partial) -->
+            <div class="w-[15%] h-[200px] md:h-[300px] flex-shrink-0 relative overflow-hidden">
+                <img src="https://placehold.co/400x600/60a5fa/60a5fa" class="w-full h-full object-cover opacity-90" alt="Sky">
+            </div>
+
+        </div>
+        
+        <!-- Spacer to prevent content overlap due to absolute caption -->
+        <div class="h-24 md:h-32"></div>
+    </section>
+
+    <!-- Bottom Content Section -->
+    <section class="px-6 md:px-10 pb-24">
+        <div class="flex flex-col md:flex-row gap-10 md:gap-0">
+            
+            <!-- Left Column: Our Impact Filter -->
+            <div class="w-full md:w-1/4 pt-2">
+                <div class="inline-flex items-center gap-3 bg-gray-100 rounded-full pl-1.5 pr-5 py-1.5 cursor-pointer hover:bg-gray-200 transition-colors">
+                    <!-- Icon Circle -->
+                    <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="4" y1="6" x2="20" y2="6" stroke="black" stroke-linecap="round"/>
+                            <line x1="4" y1="12" x2="20" y2="12" stroke="black" stroke-linecap="round"/>
+                            <line x1="4" y1="18" x2="20" y2="18" stroke="black" stroke-linecap="round"/>
+                            <circle cx="8" cy="6" r="2" fill="black" stroke="none"/>
+                            <circle cx="16" cy="12" r="2" fill="black" stroke="none"/>
+                            <circle cx="8" cy="18" r="2" fill="black" stroke="none"/>
+                        </svg>
+                    </div>
+                    <span class="text-gray-500 text-lg font-light tracking-wide">Disciplines</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Solar Innovation Title -->
+            <div class="w-full md:w-3/4">
+                <h2 class="text-[3.5rem] md:text-[5.5rem] font-light text-black leading-none mb-10 md:mb-14 tracking-tight">
+                    Architecture
+                </h2>
+                <hr class="border-t border-gray-300 w-full">
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
